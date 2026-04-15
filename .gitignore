@@ -1,0 +1,7 @@
+node_modules/
+dist/
+
+reference-bundle.js
+reference-styles.css
+
+.vercel/
