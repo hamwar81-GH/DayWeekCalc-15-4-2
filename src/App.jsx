@@ -45,6 +45,8 @@ function App() {
 
         <StatsSection stats={HOME_CONTENT.stats} />
 
+        <div id="blog" className="scroll-mt-24" aria-hidden="true" />
+
         <InfoSection
           id="learn-more"
           title={HOME_CONTENT.infoTitle}

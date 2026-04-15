@@ -96,9 +96,16 @@ export const DAY_TRIVIA = {
 };
 
 export const HEADER_LINKS = [
-  { label: "Calculator", href: "#homepage-calculator" },
-  { label: "Learn", href: "#learn-more" },
-  { label: "Trivia", href: "#day-trivia" },
+  { label: "Calculator", href: "#homepage-calculator", isActive: true },
+  { label: "Blog", href: "#blog" },
+  { label: "About", href: "#learn-more" },
+  { label: "Contact", href: "#site-footer" },
+];
+
+export const LEGAL_LINKS = [
+  { label: "Privacy Policy", href: "#privacy-policy" },
+  { label: "Terms of Use", href: "#terms-of-use" },
+  { label: "Cookies Policy", href: "#cookies-policy" },
 ];
 
 export const FOOTER_GROUPS = [
