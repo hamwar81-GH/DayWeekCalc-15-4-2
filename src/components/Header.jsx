@@ -7,6 +7,8 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLegalOpen, setIsLegalOpen] = useState(false);
   const legalMenuRef = useRef(null);
+  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+  const homeHref = currentPath === "/" ? "#" : "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +55,7 @@ function Header() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href="#" className="group flex items-center gap-2.5" aria-label="DayWeek Calculator home">
+          <a href={homeHref} className="group flex items-center gap-2.5" aria-label="DayWeek Calculator home">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-glow transition-shadow duration-300 group-hover:shadow-glow-lg">
               <CalendarDays size={16} className="text-white" />
             </div>
@@ -67,9 +69,9 @@ function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                aria-current={link.isActive ? "page" : undefined}
+                aria-current={link.route === currentPath ? "page" : undefined}
                 className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
-                  link.isActive
+                  link.route === currentPath
                     ? "bg-white/[0.08] text-white"
                     : "text-slate-400 hover:bg-white/[0.05] hover:text-white"
                 }`}
@@ -147,9 +149,9 @@ function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                aria-current={link.isActive ? "page" : undefined}
+                aria-current={link.route === currentPath ? "page" : undefined}
                 className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
-                  link.isActive
+                  link.route === currentPath
                     ? "bg-white/[0.08] text-white"
                     : "text-slate-400 hover:bg-white/[0.05] hover:text-white"
                 }`}

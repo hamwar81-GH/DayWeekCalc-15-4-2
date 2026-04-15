@@ -3,6 +3,8 @@ import { FOOTER_GROUPS } from "../lib/content";
 
 function Footer() {
   const year = new Date().getFullYear();
+  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+  const homeHref = currentPath === "/" ? "#" : "/";
 
   return (
     <footer id="site-footer" className="mt-24 border-t border-white/[0.06] scroll-mt-24" role="contentinfo">
@@ -15,7 +17,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <a href="#" className="group mb-4 flex items-center gap-2.5">
+            <a href={homeHref} className="group mb-4 flex items-center gap-2.5">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 shadow-glow">
                 <CalendarDays size={18} className="text-white" />
               </div>

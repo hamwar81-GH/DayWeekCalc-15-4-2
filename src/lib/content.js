@@ -96,9 +96,9 @@ export const DAY_TRIVIA = {
 };
 
 export const HEADER_LINKS = [
-  { label: "Calculator", href: "#homepage-calculator", isActive: true },
-  { label: "Blog", href: "#blog" },
-  { label: "About", href: "#learn-more" },
+  { label: "Calculator", href: "/#homepage-calculator", route: "/" },
+  { label: "Blog", href: "/#blog", route: "/" },
+  { label: "About", href: "/about-us", route: "/about-us" },
   { label: "Contact", href: "#site-footer" },
 ];
 
@@ -112,28 +112,29 @@ export const FOOTER_GROUPS = [
   {
     title: "Quick Links",
     links: [
-      { label: "Day of Week", href: "#homepage-calculator" },
-      { label: "Date Difference", href: "#homepage-calculator" },
-      { label: "Add / Subtract", href: "#homepage-calculator" },
-      { label: "Trivia", href: "#day-trivia" },
+      { label: "About Us", href: "/about-us" },
+      { label: "Day of Week", href: "/#homepage-calculator" },
+      { label: "Date Difference", href: "/#homepage-calculator" },
+      { label: "Add / Subtract", href: "/#homepage-calculator" },
+      { label: "Trivia", href: "/#day-trivia" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "ISO 8601 Standard", href: "#learn-more" },
-      { label: "Gregorian Calendar", href: "#learn-more" },
-      { label: "Day Names History", href: "#learn-more" },
-      { label: "Zeller's Congruence", href: "#learn-more" },
+      { label: "ISO 8601 Standard", href: "/#learn-more" },
+      { label: "Gregorian Calendar", href: "/#learn-more" },
+      { label: "Day Names History", href: "/#learn-more" },
+      { label: "Zeller's Congruence", href: "/#learn-more" },
     ],
   },
   {
     title: "Details",
     links: [
-      { label: "Weekday Calculator", href: "#homepage-calculator" },
-      { label: "Leap Year Logic", href: "#homepage-calculator" },
-      { label: "Calendar Preview", href: "#homepage-calculator" },
-      { label: "Birth Day Finder", href: "#homepage-calculator" },
+      { label: "Weekday Calculator", href: "/#homepage-calculator" },
+      { label: "Leap Year Logic", href: "/#homepage-calculator" },
+      { label: "Calendar Preview", href: "/#homepage-calculator" },
+      { label: "Birth Day Finder", href: "/#homepage-calculator" },
     ],
   },
 ];
