@@ -18,6 +18,7 @@ function HomePage() {
     title: "Day of the Week Calculator - Find Any Date's Weekday Instantly",
     description:
       "Find the day of the week for any date instantly. Includes date differences, add and subtract tools, calendar view, and helpful date context.",
+    canonicalPath: "/",
   });
 
   const scrollToCalculator = () => {

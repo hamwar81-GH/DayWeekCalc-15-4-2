@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { getSiteUrl } from "./siteConfig";
 
 function ensureMetaDescription() {
   let descriptionTag = document.querySelector('meta[name="description"]');
@@ -12,9 +13,22 @@ function ensureMetaDescription() {
   return descriptionTag;
 }
 
-export function usePageMetadata({ title, description }) {
+function ensureCanonicalLink() {
+  let canonicalLink = document.querySelector('link[rel="canonical"]');
+
+  if (!canonicalLink) {
+    canonicalLink = document.createElement("link");
+    canonicalLink.setAttribute("rel", "canonical");
+    document.head.appendChild(canonicalLink);
+  }
+
+  return canonicalLink;
+}
+
+export function usePageMetadata({ title, description, canonicalPath = "/" }) {
   useEffect(() => {
     document.title = title;
     ensureMetaDescription().setAttribute("content", description);
-  }, [description, title]);
+    ensureCanonicalLink().setAttribute("href", getSiteUrl(canonicalPath));
+  }, [canonicalPath, description, title]);
 }

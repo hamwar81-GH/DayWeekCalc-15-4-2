@@ -32,6 +32,7 @@ function AboutPage() {
     title: "About Us - Day of the Week Calculator",
     description:
       "Learn about Day of the Week Calculator, the team behind it, what the tool does, and why users trust it for fast and accurate date lookups.",
+    canonicalPath: "/about-us",
   });
 
   const openCalculator = () => {
