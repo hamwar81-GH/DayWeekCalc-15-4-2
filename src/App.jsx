@@ -2,6 +2,7 @@ import BackToTopButton from "./components/BackToTopButton";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
 import CookiesPolicyPage from "./pages/CookiesPolicyPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
@@ -13,6 +14,7 @@ function App() {
   const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const routes = {
     "/": <HomePage />,
+    "/blog": <BlogPage />,
     "/about-us": <AboutPage />,
     "/contact-us": <ContactPage />,
     "/html-sitemap": <HtmlSitemapPage />,

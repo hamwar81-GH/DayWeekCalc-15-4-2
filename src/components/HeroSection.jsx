@@ -8,6 +8,7 @@ function HeroSection({
   primaryLabel,
   secondaryLabel,
   onPrimaryClick,
+  secondaryHref = "#learn-more",
 }) {
   return (
     <section className="relative overflow-hidden px-4 py-24 sm:px-6 lg:px-8">
@@ -46,7 +47,7 @@ function HeroSection({
             <ArrowRight size={16} />
           </button>
 
-          <a href="#learn-more" className="btn-secondary">
+          <a href={secondaryHref} className="btn-secondary">
             <BookOpen size={18} />
             {secondaryLabel}
           </a>

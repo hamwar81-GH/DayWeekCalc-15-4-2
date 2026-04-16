@@ -47,6 +47,11 @@ export const HOME_CONTENT = {
 
 export const SEARCH_TARGETS = [
   {
+    label: "Blog",
+    href: "/blog",
+    keywords: ["blog", "articles", "guides", "calendar articles", "weekday history"],
+  },
+  {
     label: "Day of Week Calculator",
     href: "/#homepage-calculator",
     keywords: ["calculator", "day of week", "weekday", "date tool", "birth day", "birthday"],
@@ -194,7 +199,7 @@ export const DAY_TRIVIA = {
 
 export const HEADER_LINKS = [
   { label: "Calculator", href: "/#homepage-calculator", route: "/" },
-  { label: "Blog", href: "/#blog", route: "/" },
+  { label: "Blog", href: "/blog", route: "/blog" },
   { label: "About Us", href: "/about-us", route: "/about-us" },
   { label: "Contact Us", href: "/contact-us", route: "/contact-us" },
 ];
@@ -218,6 +223,7 @@ export const HTML_SITEMAP_GROUPS = [
     title: "Main Pages",
     links: [
       { label: "Home", href: "/" },
+      { label: "Blog", href: "/blog" },
       { label: "About Us", href: "/about-us" },
       { label: "Meet the Team", href: "/about-us#meet-the-team" },
       { label: "Contact Us", href: "/contact-us" },
@@ -233,7 +239,6 @@ export const HTML_SITEMAP_GROUPS = [
       { label: "Frequently Asked Questions", href: "/#faq" },
       { label: "Trivia About Each Day", href: "/#day-trivia" },
       { label: "Learn More About Weekdays", href: "/#learn-more" },
-      { label: "Blog", href: "/#blog" },
     ],
   },
   {
@@ -254,6 +259,7 @@ export const FOOTER_GROUPS = [
   {
     title: "Quick Links",
     links: [
+      { label: "Blog", href: "/blog" },
       { label: "Day of Week", href: "/#homepage-calculator" },
       { label: "Date Difference", href: "/#homepage-calculator" },
       { label: "Add / Subtract", href: "/#homepage-calculator" },

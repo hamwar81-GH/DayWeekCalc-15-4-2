@@ -44,6 +44,7 @@ function HomePage() {
         primaryLabel={HOME_CONTENT.heroPrimaryCta}
         secondaryLabel={HOME_CONTENT.heroSecondaryCta}
         onPrimaryClick={scrollToCalculator}
+        secondaryHref="/blog"
       />
 
       <section ref={calculatorRef} id="homepage-calculator" className="px-4 pb-24 sm:px-6 lg:px-8">
