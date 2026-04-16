@@ -98,8 +98,8 @@ export const DAY_TRIVIA = {
 export const HEADER_LINKS = [
   { label: "Calculator", href: "/#homepage-calculator", route: "/" },
   { label: "Blog", href: "/#blog", route: "/" },
-  { label: "About", href: "/about-us", route: "/about-us" },
-  { label: "Contact", href: "#site-footer" },
+  { label: "About Us", href: "/about-us", route: "/about-us" },
+  { label: "Contact Us", href: "/contact-us", route: "/contact-us" },
 ];
 
 export const LEGAL_LINKS = [
