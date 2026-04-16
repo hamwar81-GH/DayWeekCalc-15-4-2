@@ -1,4 +1,5 @@
 import { CalendarDays } from "lucide-react";
+import { ABOUT_CONTACT } from "../lib/aboutContent";
 import { FOOTER_GROUPS } from "../lib/content";
 
 function Footer() {
@@ -58,6 +59,21 @@ function Footer() {
           <p className="text-sm text-slate-700">
             Built with <span className="text-red-500">love</span> for date enthusiasts worldwide
           </p>
+        </div>
+
+        <div className="sr-only">
+          <p>Day of the Week Calculator is an online-first date utility and business entity.</p>
+          <p>
+            Contact email: <a href={`mailto:${ABOUT_CONTACT.email}`}>{ABOUT_CONTACT.email}</a>
+          </p>
+          <p>Copyright {year} DayWeek Calculator. All rights reserved.</p>
+          <nav aria-label="Footer essential links">
+            {FOOTER_GROUPS.flatMap((group) => group.links).map((link) => (
+              <a key={`footer-hidden-${link.label}`} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>
