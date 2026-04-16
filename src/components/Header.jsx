@@ -9,6 +9,7 @@ function Header() {
   const legalMenuRef = useRef(null);
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const homeHref = currentPath === "/" ? "#" : "/";
+  const calculatorHref = currentPath === "/" ? "#homepage-calculator" : "/#homepage-calculator";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,6 +110,7 @@ function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsLegalOpen(false)}
+                    aria-current={link.route === currentPath ? "page" : undefined}
                     className={`block px-5 py-4 text-base font-medium text-slate-300 transition-colors duration-200 hover:bg-white/[0.04] hover:text-white ${
                       index < LEGAL_LINKS.length - 1 ? "border-b border-white/[0.06]" : ""
                     }`}
@@ -122,7 +124,7 @@ function Header() {
           </nav>
 
           <div className="hidden md:flex">
-            <a href="#homepage-calculator" className="btn-primary px-5 py-2 text-sm">
+            <a href={calculatorHref} className="btn-primary px-5 py-2 text-sm">
               Try Calculator
             </a>
           </div>
@@ -168,6 +170,7 @@ function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
+                    aria-current={link.route === currentPath ? "page" : undefined}
                     className="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-400 transition-all duration-200 hover:bg-white/[0.05] hover:text-white"
                   >
                     {link.label}

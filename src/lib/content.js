@@ -103,9 +103,9 @@ export const HEADER_LINKS = [
 ];
 
 export const LEGAL_LINKS = [
-  { label: "Privacy Policy", href: "#privacy-policy" },
-  { label: "Terms of Use", href: "#terms-of-use" },
-  { label: "Cookies Policy", href: "#cookies-policy" },
+  { label: "Privacy Policy", href: "/privacy-policy", route: "/privacy-policy" },
+  { label: "Terms of Use", href: "/terms-of-use", route: "/terms-of-use" },
+  { label: "Cookies Policy", href: "/cookies-policy", route: "/cookies-policy" },
 ];
 
 export const FOOTER_GROUPS = [

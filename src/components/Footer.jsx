@@ -8,11 +8,6 @@ function Footer() {
 
   return (
     <footer id="site-footer" className="mt-24 border-t border-white/[0.06] scroll-mt-24" role="contentinfo">
-      <div className="sr-only" aria-hidden="true">
-        <span id="privacy-policy">Privacy Policy</span>
-        <span id="terms-of-use">Terms of Use</span>
-        <span id="cookies-policy">Cookies Policy</span>
-      </div>
       <div className="h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">

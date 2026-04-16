@@ -1,5 +1,5 @@
 import { ABOUT_CONTACT } from "./aboutContent";
-import { HEADER_LINKS } from "./content";
+import { HEADER_LINKS, LEGAL_LINKS } from "./content";
 import { getSiteUrl, siteConfig } from "./siteConfig";
 
 function resolveNavigationUrl(href, currentPath) {
@@ -41,7 +41,7 @@ export function buildWebSiteSchema() {
 }
 
 export function buildSiteNavigationSchema(currentPath = "/") {
-  return HEADER_LINKS.map((link) => ({
+  return [...HEADER_LINKS, ...LEGAL_LINKS].map((link) => ({
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
     name: link.label,
