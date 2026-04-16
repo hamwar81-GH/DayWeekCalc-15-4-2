@@ -210,6 +210,40 @@ const FOOTER_COMPANY_LINKS = [
   { label: "Meet the Team", href: "/about-us#meet-the-team" },
   { label: "Contact Us", href: "/contact-us" },
   ...LEGAL_LINKS.map(({ label, href }) => ({ label, href })),
+  { label: "HTML Sitemap", href: "/html-sitemap" },
+];
+
+export const HTML_SITEMAP_GROUPS = [
+  {
+    title: "Main Pages",
+    links: [
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/about-us" },
+      { label: "Meet the Team", href: "/about-us#meet-the-team" },
+      { label: "Contact Us", href: "/contact-us" },
+    ],
+  },
+  {
+    title: "Tools and Sections",
+    links: [
+      { label: "Day of Week Calculator", href: "/#homepage-calculator" },
+      { label: "Date Difference", href: "/#homepage-calculator" },
+      { label: "Add / Subtract Dates", href: "/#homepage-calculator" },
+      { label: "Search", href: "/#site-search" },
+      { label: "Frequently Asked Questions", href: "/#faq" },
+      { label: "Trivia About Each Day", href: "/#day-trivia" },
+      { label: "Learn More About Weekdays", href: "/#learn-more" },
+      { label: "Blog", href: "/#blog" },
+    ],
+  },
+  {
+    title: "Legal Pages",
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Use", href: "/terms-of-use" },
+      { label: "Cookies Policy", href: "/cookies-policy" },
+    ],
+  },
 ];
 
 export const FOOTER_GROUPS = [

@@ -11,6 +11,11 @@
       "permanent": true
     },
     {
+      "source": "/html-sitemap/",
+      "destination": "/html-sitemap",
+      "permanent": true
+    },
+    {
       "source": "/privacy-policy/",
       "destination": "/privacy-policy",
       "permanent": true
@@ -33,6 +38,10 @@
     },
     {
       "source": "/contact-us",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/html-sitemap",
       "destination": "/index.html"
     },
     {

@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import CookiesPolicyPage from "./pages/CookiesPolicyPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
+import HtmlSitemapPage from "./pages/HtmlSitemapPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
 
@@ -14,6 +15,7 @@ function App() {
     "/": <HomePage />,
     "/about-us": <AboutPage />,
     "/contact-us": <ContactPage />,
+    "/html-sitemap": <HtmlSitemapPage />,
     "/privacy-policy": <PrivacyPolicyPage />,
     "/terms-of-use": <TermsOfUsePage />,
     "/cookies-policy": <CookiesPolicyPage />,
