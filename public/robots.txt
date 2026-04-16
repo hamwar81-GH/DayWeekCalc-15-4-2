@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://day-week-calc-15-4-2.vercel.app/sitemap.xml

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { CalendarDays, ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { HEADER_LINKS, LEGAL_LINKS } from "../lib/content";
 
 function Header() {
@@ -58,7 +58,7 @@ function Header() {
         <div className="flex h-16 items-center justify-between">
           <a href={homeHref} className="group flex items-center gap-2.5" aria-label="DayWeek Calculator home">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-glow transition-shadow duration-300 group-hover:shadow-glow-lg">
-              <CalendarDays size={16} className="text-white" />
+              <img src="/favicon.svg" alt="Day of the Week Calculator logo" className="h-4 w-4" />
             </div>
             <span className="font-display text-lg font-bold leading-tight text-white">
               Day<span className="gradient-text">Week</span>
