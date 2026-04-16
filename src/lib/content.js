@@ -33,11 +33,47 @@ export const HOME_CONTENT = {
   ],
   triviaTitle: "Trivia About Each Day",
   triviaSubtitle: "Did you know? Each day of the week has a rich history of curious facts and cultural significance.",
+  faqTitle: "Frequently Asked Questions",
+  faqSubtitle:
+    "Quick answers to the most common questions about how the Day of the Week Calculator works and what you can use it for.",
   ctaTitle: "What Day Were You Born?",
   ctaSubtitle:
     "Enter your birthday and discover which day of the week you were born, along with fascinating facts about that day.",
   ctaButton: "Calculate Now",
 };
+
+export const HOME_FAQS = [
+  {
+    question: "How does the Day of the Week Calculator work?",
+    answer:
+      "The calculator uses date logic based on Zeller's Congruence to determine the weekday for a selected date, then presents the result with supporting calendar context and related details.",
+  },
+  {
+    question: "Can I check past and future dates?",
+    answer:
+      "Yes. You can enter historical dates, present-day dates, and future dates to find the corresponding day of the week instantly.",
+  },
+  {
+    question: "Does the site only show weekdays?",
+    answer:
+      "No. In addition to weekday lookup, the site also includes tools for date difference calculations and adding or subtracting days from a chosen date.",
+  },
+  {
+    question: "Can I use it to find the day I was born?",
+    answer:
+      "Yes. Enter your birth date in the calculator to find the weekday you were born on and explore related date information.",
+  },
+  {
+    question: "Is the calculator useful for planning and scheduling?",
+    answer:
+      "Yes. The date difference and add-or-subtract tools are useful for planning events, comparing timelines, checking deadlines, and answering everyday calendar questions.",
+  },
+  {
+    question: "Do I need to create an account to use the calculator?",
+    answer:
+      "No. The core calculator tools are designed to be used directly in the browser without creating an account.",
+  },
+];
 
 export const TOOL_TABS = [
   {

@@ -1,3 +1,5 @@
+import JsonLd from "../components/JsonLd";
+import FaqSection from "../components/FaqSection";
 import { useRef } from "react";
 import { BookOpen, CalendarDays, Clock3 } from "lucide-react";
 import HeroSection from "../components/HeroSection";
@@ -6,13 +8,15 @@ import StatsSection from "../components/StatsSection";
 import InfoSection from "../components/InfoSection";
 import TriviaSection from "../components/TriviaSection";
 import CallToActionSection from "../components/CallToActionSection";
-import { DAY_TRIVIA, HOME_CONTENT } from "../lib/content";
+import { DAY_TRIVIA, HOME_CONTENT, HOME_FAQS } from "../lib/content";
+import { buildFaqSchema } from "../lib/schema";
 import { usePageMetadata } from "../lib/usePageMetadata";
 
 const INFO_ICONS = [Clock3, CalendarDays, BookOpen];
 
 function HomePage() {
   const calculatorRef = useRef(null);
+  const faqSchema = buildFaqSchema(HOME_FAQS);
 
   usePageMetadata({
     title: "Day of the Week Calculator - Find Any Date's Weekday Instantly",
@@ -30,6 +34,7 @@ function HomePage() {
 
   return (
     <main className="flex-1">
+      <JsonLd id="home-faq-schema" data={faqSchema} />
       <HeroSection
         badge={HOME_CONTENT.heroBadge}
         titlePrefix={HOME_CONTENT.heroTitlePrefix}
@@ -56,6 +61,13 @@ function HomePage() {
         subtitle={HOME_CONTENT.infoSubtitle}
         sections={HOME_CONTENT.infoSections}
         icons={INFO_ICONS}
+      />
+
+      <FaqSection
+        id="faq"
+        title={HOME_CONTENT.faqTitle}
+        subtitle={HOME_CONTENT.faqSubtitle}
+        items={HOME_FAQS}
       />
 
       <TriviaSection
