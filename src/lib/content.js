@@ -108,11 +108,20 @@ export const LEGAL_LINKS = [
   { label: "Cookies Policy", href: "/cookies-policy", route: "/cookies-policy" },
 ];
 
+const FOOTER_COMPANY_LINKS = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
+  ...LEGAL_LINKS.map(({ label, href }) => ({ label, href })),
+];
+
 export const FOOTER_GROUPS = [
+  {
+    title: "Company",
+    links: FOOTER_COMPANY_LINKS,
+  },
   {
     title: "Quick Links",
     links: [
-      { label: "About Us", href: "/about-us" },
       { label: "Day of Week", href: "/#homepage-calculator" },
       { label: "Date Difference", href: "/#homepage-calculator" },
       { label: "Add / Subtract", href: "/#homepage-calculator" },
