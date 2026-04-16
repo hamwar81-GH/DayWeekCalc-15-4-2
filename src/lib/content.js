@@ -207,6 +207,7 @@ export const LEGAL_LINKS = [
 
 const FOOTER_COMPANY_LINKS = [
   { label: "About Us", href: "/about-us" },
+  { label: "Meet the Team", href: "/about-us#meet-the-team" },
   { label: "Contact Us", href: "/contact-us" },
   ...LEGAL_LINKS.map(({ label, href }) => ({ label, href })),
 ];

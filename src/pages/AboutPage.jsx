@@ -124,7 +124,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="px-4 py-24 sm:px-6 lg:px-8">
+      <section id="meet-the-team" className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <div className="mb-16 text-center">
             <h2 className="section-title mb-4">Meet the Team</h2>
