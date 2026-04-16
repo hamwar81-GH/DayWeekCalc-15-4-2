@@ -137,11 +137,20 @@ function AboutPage() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {ABOUT_TEAM.map((member) => (
               <article key={member.name} className="card-hover p-6">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 font-display text-lg font-bold text-white shadow-glow">
-                  {member.initials}
+                <div className="mb-5 h-16 w-16 overflow-hidden rounded-2xl border border-primary-500/20 bg-gradient-to-br from-primary-500/20 to-accent-500/20 shadow-glow">
+                  <img
+                    src={member.image}
+                    alt={member.alt}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width="64"
+                    height="64"
+                  />
                 </div>
                 <h3 className="font-display text-lg font-bold text-white">{member.name}</h3>
-                <p className="mb-3 text-sm font-medium text-primary-300">{member.role}</p>
+                <p className="text-sm font-medium text-white/85">{member.role}</p>
+                <p className="mb-3 text-sm font-medium text-primary-300">{member.focus}</p>
                 <p className="text-sm leading-relaxed text-slate-500">{member.description}</p>
               </article>
             ))}

@@ -63,30 +63,38 @@ export const ABOUT_TRUST_POINTS = [
 
 export const ABOUT_TEAM = [
   {
-    name: "Product Creator",
-    initials: "PC",
-    role: "Tool Strategy",
+    name: "Ethan Carter",
+    role: "Product Creator",
+    focus: "Tool Strategy",
+    image: "/images/team/product-creator.jpg",
+    alt: "Portrait of Ethan Carter, product creator for Day of the Week Calculator.",
     description:
       "Shapes the experience around real date-related questions and keeps the product practical, focused, and easy to understand.",
   },
   {
-    name: "Frontend Developer",
-    initials: "FD",
-    role: "Calculator Experience",
+    name: "Liam Brooks",
+    role: "Frontend Developer",
+    focus: "Calculator Experience",
+    image: "/images/team/frontend-developer.jpg",
+    alt: "Portrait of Liam Brooks, frontend developer for Day of the Week Calculator.",
     description:
       "Builds and maintains the interactive experience so weekday lookup and related date tools stay fast and dependable.",
   },
   {
-    name: "UI Designer",
-    initials: "UI",
-    role: "Interface Consistency",
+    name: "Maya Shah",
+    role: "UI Designer",
+    focus: "Interface Consistency",
+    image: "/images/team/ui-designer.jpg",
+    alt: "Portrait of Maya Shah, UI designer for Day of the Week Calculator.",
     description:
       "Protects clarity, spacing, typography, and responsiveness so the site feels polished without becoming complicated.",
   },
   {
-    name: "Content Reviewer",
-    initials: "CR",
-    role: "Editorial Quality",
+    name: "Olivia Chen",
+    role: "Content Reviewer",
+    focus: "Editorial Quality",
+    image: "/images/team/content-reviewer.jpg",
+    alt: "Portrait of Olivia Chen, content reviewer for Day of the Week Calculator.",
     description:
       "Reviews on-page explanations and supporting copy to keep the information concise, useful, and aligned with the product.",
   },
