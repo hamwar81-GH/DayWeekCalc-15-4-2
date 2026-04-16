@@ -1,3 +1,4 @@
+import BackToTopButton from "./components/BackToTopButton";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
@@ -20,12 +21,13 @@ function App() {
   const currentPage = routes[normalizedPath] || <HomePage />;
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div id="top" className="flex min-h-screen flex-col">
       <Header />
 
       {currentPage}
 
       <Footer />
+      <BackToTopButton />
     </div>
   );
 }

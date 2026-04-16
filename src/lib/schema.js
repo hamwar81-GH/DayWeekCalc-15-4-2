@@ -37,6 +37,11 @@ export function buildWebSiteSchema() {
     "@type": "WebSite",
     name: siteConfig.siteName,
     url: siteConfig.siteUrl,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteConfig.siteUrl}?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 

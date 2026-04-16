@@ -14,6 +14,9 @@ export const HOME_CONTENT = {
   ],
   infoTitle: "Learn More About Weekdays",
   infoSubtitle: "Explore the fascinating history behind how we name and track days of the week.",
+  searchTitle: "Find What You Need Faster",
+  searchSubtitle:
+    "Search the site for the calculator, date tools, FAQ answers, learning sections, or key pages and jump straight there.",
   infoSections: [
     {
       title: "ISO 8601",
@@ -41,6 +44,64 @@ export const HOME_CONTENT = {
     "Enter your birthday and discover which day of the week you were born, along with fascinating facts about that day.",
   ctaButton: "Calculate Now",
 };
+
+export const SEARCH_TARGETS = [
+  {
+    label: "Day of Week Calculator",
+    href: "/#homepage-calculator",
+    keywords: ["calculator", "day of week", "weekday", "date tool", "birth day", "birthday"],
+  },
+  {
+    label: "Date Difference Tool",
+    href: "/#homepage-calculator",
+    keywords: ["date difference", "difference", "compare dates", "timeline"],
+  },
+  {
+    label: "Add / Subtract Dates",
+    href: "/#homepage-calculator",
+    keywords: ["add subtract", "offset", "future date", "past date", "add days", "subtract days"],
+  },
+  {
+    label: "Learn More About Weekdays",
+    href: "/#learn-more",
+    keywords: ["learn more", "iso 8601", "gregorian calendar", "day names", "zeller"],
+  },
+  {
+    label: "Frequently Asked Questions",
+    href: "/#faq",
+    keywords: ["faq", "questions", "help", "how it works"],
+  },
+  {
+    label: "Trivia About Each Day",
+    href: "/#day-trivia",
+    keywords: ["trivia", "facts", "days", "history"],
+  },
+  {
+    label: "About Us",
+    href: "/about-us",
+    keywords: ["about", "about us", "team", "company"],
+  },
+  {
+    label: "Contact Us",
+    href: "/contact-us",
+    keywords: ["contact", "contact us", "email", "support"],
+  },
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+    keywords: ["privacy", "privacy policy", "data"],
+  },
+  {
+    label: "Terms of Use",
+    href: "/terms-of-use",
+    keywords: ["terms", "terms of use", "legal"],
+  },
+  {
+    label: "Cookies Policy",
+    href: "/cookies-policy",
+    keywords: ["cookies", "cookies policy"],
+  },
+];
 
 export const HOME_FAQS = [
   {

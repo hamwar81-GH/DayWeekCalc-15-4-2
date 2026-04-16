@@ -1,5 +1,6 @@
 import JsonLd from "../components/JsonLd";
 import FaqSection from "../components/FaqSection";
+import SearchSection from "../components/SearchSection";
 import { useRef } from "react";
 import { BookOpen, CalendarDays, Clock3 } from "lucide-react";
 import HeroSection from "../components/HeroSection";
@@ -8,7 +9,7 @@ import StatsSection from "../components/StatsSection";
 import InfoSection from "../components/InfoSection";
 import TriviaSection from "../components/TriviaSection";
 import CallToActionSection from "../components/CallToActionSection";
-import { DAY_TRIVIA, HOME_CONTENT, HOME_FAQS } from "../lib/content";
+import { DAY_TRIVIA, HOME_CONTENT, HOME_FAQS, SEARCH_TARGETS } from "../lib/content";
 import { buildFaqSchema } from "../lib/schema";
 import { usePageMetadata } from "../lib/usePageMetadata";
 
@@ -52,6 +53,13 @@ function HomePage() {
       </section>
 
       <StatsSection stats={HOME_CONTENT.stats} />
+
+      <SearchSection
+        id="site-search"
+        title={HOME_CONTENT.searchTitle}
+        subtitle={HOME_CONTENT.searchSubtitle}
+        targets={SEARCH_TARGETS}
+      />
 
       <div id="blog" className="scroll-mt-24" aria-hidden="true" />
 
