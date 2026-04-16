@@ -18,7 +18,7 @@ function Footer() {
                 <CalendarDays size={18} className="text-white" />
               </div>
               <span className="font-display text-xl font-bold text-white">
-                Day<span className="gradient-text">Week</span>
+                Day of the Week <span className="gradient-text">Calculator</span>
               </span>
             </a>
 
@@ -55,7 +55,7 @@ function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 sm:flex-row">
-          <p className="text-sm text-slate-600">Â© {year} DayWeek Calculator. All rights reserved.</p>
+          <p className="text-sm text-slate-600">© {year} Day of the Week Calculator. All rights reserved.</p>
           <p className="text-sm text-slate-700">
             Built with <span className="text-red-500">love</span> for date enthusiasts worldwide
           </p>
@@ -66,7 +66,7 @@ function Footer() {
           <p>
             Contact email: <a href={`mailto:${ABOUT_CONTACT.email}`}>{ABOUT_CONTACT.email}</a>
           </p>
-          <p>Copyright {year} DayWeek Calculator. All rights reserved.</p>
+          <p>Copyright {year} Day of the Week Calculator. All rights reserved.</p>
           <nav aria-label="Footer essential links">
             {FOOTER_GROUPS.flatMap((group) => group.links).map((link) => (
               <a key={`footer-hidden-${link.label}`} href={link.href}>

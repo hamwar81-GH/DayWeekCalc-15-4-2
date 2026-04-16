@@ -1,7 +1,7 @@
 export const HOME_CONTENT = {
   heroBadge: "Powered by Zeller's Congruence",
-  heroTitlePrefix: "Find Any Date's",
-  heroTitleAccent: "Day of the Week",
+  heroTitlePrefix: "Day of the Week",
+  heroTitleAccent: "Calculator",
   heroSubtitle:
     "Enter any date - past, present, or future - and instantly discover what day of the week it falls on, complete with fun facts and a full calendar view.",
   heroPrimaryCta: "Try the Calculator",

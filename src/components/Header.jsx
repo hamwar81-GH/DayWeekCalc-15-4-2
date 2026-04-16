@@ -56,12 +56,16 @@ function Header() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href={homeHref} className="group flex items-center gap-2.5" aria-label="DayWeek Calculator home">
+          <a
+            href={homeHref}
+            className="group flex items-center gap-2.5"
+            aria-label="Day of the Week Calculator home"
+          >
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-glow transition-shadow duration-300 group-hover:shadow-glow-lg">
               <img src="/favicon.svg" alt="Day of the Week Calculator logo" className="h-4 w-4" />
             </div>
             <span className="font-display text-lg font-bold leading-tight text-white">
-              Day<span className="gradient-text">Week</span>
+              Day of the Week <span className="gradient-text">Calculator</span>
             </span>
           </a>
 
