@@ -7,6 +7,38 @@
     {
       "source": "/about-us/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms-of-use/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/cookies-policy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/cookies-policy/",
+      "destination": "/index.html"
     }
   ]
 }
