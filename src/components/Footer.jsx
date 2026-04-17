@@ -4,8 +4,7 @@ import { FOOTER_GROUPS } from "../lib/content";
 
 function Footer() {
   const year = new Date().getFullYear();
-  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
-  const homeHref = currentPath === "/" ? "#" : "/";
+  const homeHref = "/";
 
   return (
     <footer id="site-footer" className="mt-24 border-t border-white/[0.06] scroll-mt-24" role="contentinfo">
@@ -55,7 +54,7 @@ function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 sm:flex-row">
-          <p className="text-sm text-slate-600">© {year} Day of the Week Calculator. All rights reserved.</p>
+          <p className="text-sm text-slate-600">&copy; {year} Day of the Week Calculator. All rights reserved.</p>
           <p className="text-sm text-slate-700">
             Built with <span className="text-red-500">love</span> for date enthusiasts worldwide
           </p>

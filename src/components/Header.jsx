@@ -8,7 +8,7 @@ function Header() {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
   const legalMenuRef = useRef(null);
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
-  const homeHref = currentPath === "/" ? "#" : "/";
+  const homeHref = "/";
   const calculatorHref = currentPath === "/" ? "#homepage-calculator" : "/#homepage-calculator";
 
   useEffect(() => {
