@@ -1,4 +1,4 @@
-const DEFAULT_SITE_URL = "https://day-week-calc-15-4-2.vercel.app/#";
+const DEFAULT_SITE_URL = "https://www.dayoftheweekcalculator.com/";
 
 function normalizeSiteUrl(url) {
   try {
@@ -15,7 +15,7 @@ function normalizeSiteUrl(url) {
 
     return parsedUrl.toString();
   } catch {
-    return "https://day-week-calc-15-4-2.vercel.app/";
+    return "https://www.dayoftheweekcalculator.com/";
   }
 }
 

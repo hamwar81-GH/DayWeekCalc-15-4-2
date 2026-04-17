@@ -55,5 +55,6 @@ export function usePageMetadata({ title, description, canonicalPath = "/" }) {
       "content",
       description,
     );
+    ensureMetaTag('meta[name="twitter:url"]', { name: "twitter:url" }).setAttribute("content", canonicalUrl);
   }, [canonicalPath, description, title]);
 }
