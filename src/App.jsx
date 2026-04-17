@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BackToTopButton from "./components/BackToTopButton";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,8 +10,13 @@ import HomePage from "./pages/HomePage";
 import HtmlSitemapPage from "./pages/HtmlSitemapPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
+import { initializeAnalyticsEvents } from "./lib/analyticsEvents";
 
 function App() {
+  useEffect(() => {
+    initializeAnalyticsEvents();
+  }, []);
+
   const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const routes = {
     "/": <HomePage />,
