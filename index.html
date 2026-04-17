@@ -31,120 +31,101 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Day of the Week Calculator",
-        "url": "https://www.dayoftheweekcalculator.com/",
-        "description": "Find the day of the week for any date instantly. Includes date differences, add/subtract tools, calendar view, and helpful date context.",
-        "email": "contact@dayoftheweekcalculator.com",
-        "logo": "https://www.dayoftheweekcalculator.com/favicon.svg"
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Day of the Week Calculator",
-        "url": "https://www.dayoftheweekcalculator.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.dayoftheweekcalculator.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Organization",
+            "@id": "https://www.dayoftheweekcalculator.com/#organization",
+            "name": "Day of the Week Calculator",
+            "url": "https://www.dayoftheweekcalculator.com/",
+            "description": "Find the day of the week for any date instantly. Includes date differences, add/subtract tools, calendar view, and helpful date context.",
+            "email": "contact@dayoftheweekcalculator.com",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://www.dayoftheweekcalculator.com/#logo",
+              "url": "https://www.dayoftheweekcalculator.com/favicon.svg",
+              "name": "Day of the Week Calculator logo"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.dayoftheweekcalculator.com/#website",
+            "name": "Day of the Week Calculator",
+            "url": "https://www.dayoftheweekcalculator.com/",
+            "description": "Find the day of the week for any date instantly. Includes date differences, add/subtract tools, calendar view, and helpful date context.",
+            "publisher": {
+              "@id": "https://www.dayoftheweekcalculator.com/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "@id": "https://www.dayoftheweekcalculator.com/#website-search",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.dayoftheweekcalculator.com/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-calculator",
             "name": "Calculator",
-            "url": "https://www.dayoftheweekcalculator.com/#homepage-calculator"
+            "url": "https://www.dayoftheweekcalculator.com/#homepage-calculator",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
+            }
           },
           {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-blog",
             "name": "Blog",
-            "url": "https://www.dayoftheweekcalculator.com/blog"
+            "url": "https://www.dayoftheweekcalculator.com/blog",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
+            }
           },
           {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-about-us",
             "name": "About Us",
-            "url": "https://www.dayoftheweekcalculator.com/about-us"
+            "url": "https://www.dayoftheweekcalculator.com/about-us",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
+            }
           },
           {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-contact-us",
             "name": "Contact Us",
-            "url": "https://www.dayoftheweekcalculator.com/contact-us"
+            "url": "https://www.dayoftheweekcalculator.com/contact-us",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
+            }
           },
           {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-privacy-policy",
             "name": "Privacy Policy",
-            "url": "https://www.dayoftheweekcalculator.com/privacy-policy"
+            "url": "https://www.dayoftheweekcalculator.com/privacy-policy",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
+            }
           },
           {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-terms-of-use",
             "name": "Terms of Use",
-            "url": "https://www.dayoftheweekcalculator.com/terms-of-use"
+            "url": "https://www.dayoftheweekcalculator.com/terms-of-use",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
+            }
           },
           {
             "@type": "SiteNavigationElement",
+            "@id": "https://www.dayoftheweekcalculator.com/#navigation-cookies-policy",
             "name": "Cookies Policy",
-            "url": "https://www.dayoftheweekcalculator.com/cookies-policy"
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does the Day of the Week Calculator work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The calculator uses date logic based on Zeller's Congruence to determine the weekday for a selected date, then presents the result with supporting calendar context and related details."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I check past and future dates?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. You can enter historical dates, present-day dates, and future dates to find the corresponding day of the week instantly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the site only show weekdays?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. In addition to weekday lookup, the site also includes tools for date difference calculations and adding or subtracting days from a chosen date."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I use it to find the day I was born?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Enter your birth date in the calculator to find the weekday you were born on and explore related date information."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is the calculator useful for planning and scheduling?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The date difference and add-or-subtract tools are useful for planning events, comparing timelines, checking deadlines, and answering everyday calendar questions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need to create an account to use the calculator?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. The core calculator tools are designed to be used directly in the browser without creating an account."
+            "url": "https://www.dayoftheweekcalculator.com/cookies-policy",
+            "isPartOf": {
+              "@id": "https://www.dayoftheweekcalculator.com/#website"
             }
           }
         ]

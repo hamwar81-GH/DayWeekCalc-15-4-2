@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { buildWebPageSchema, serializeJsonLd } from "./schema";
 import { getSiteUrl, siteConfig } from "./siteConfig";
 
 function ensureMetaTag(selector, attributes) {
@@ -27,9 +28,27 @@ function ensureCanonicalLink() {
   return canonicalLink;
 }
 
+function ensureJsonLdScript(id) {
+  let script = document.querySelector(`script[data-jsonld-id="${id}"]`);
+
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-jsonld-id", id);
+    document.head.appendChild(script);
+  }
+
+  return script;
+}
+
 export function usePageMetadata({ title, description, canonicalPath = "/" }) {
   useEffect(() => {
     const canonicalUrl = getSiteUrl(canonicalPath);
+    const webPageSchema = buildWebPageSchema({
+      title,
+      description,
+      path: canonicalPath,
+    });
 
     document.title = title;
     ensureMetaTag('meta[name="description"]', { name: "description" }).setAttribute("content", description);
@@ -56,5 +75,6 @@ export function usePageMetadata({ title, description, canonicalPath = "/" }) {
       description,
     );
     ensureMetaTag('meta[name="twitter:url"]', { name: "twitter:url" }).setAttribute("content", canonicalUrl);
+    ensureJsonLdScript("page-webpage-schema").textContent = serializeJsonLd(webPageSchema);
   }, [canonicalPath, description, title]);
 }

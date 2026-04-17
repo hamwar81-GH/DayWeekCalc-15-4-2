@@ -17,7 +17,7 @@ const INFO_ICONS = [Clock3, CalendarDays, BookOpen];
 
 function HomePage() {
   const calculatorRef = useRef(null);
-  const faqSchema = buildFaqSchema(HOME_FAQS);
+  const faqSchema = buildFaqSchema(HOME_FAQS, "/");
 
   usePageMetadata({
     title: "Day of the Week Calculator - Find Any Date's Weekday Instantly",
