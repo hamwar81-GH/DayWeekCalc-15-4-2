@@ -1,4 +1,3 @@
-import JsonLd from "../components/JsonLd";
 import FaqSection from "../components/FaqSection";
 import SearchSection from "../components/SearchSection";
 import { useRef } from "react";
@@ -10,14 +9,12 @@ import InfoSection from "../components/InfoSection";
 import TriviaSection from "../components/TriviaSection";
 import CallToActionSection from "../components/CallToActionSection";
 import { DAY_TRIVIA, HOME_CONTENT, HOME_FAQS, SEARCH_TARGETS } from "../lib/content";
-import { buildFaqSchema } from "../lib/schema";
 import { usePageMetadata } from "../lib/usePageMetadata";
 
 const INFO_ICONS = [Clock3, CalendarDays, BookOpen];
 
 function HomePage() {
   const calculatorRef = useRef(null);
-  const faqSchema = buildFaqSchema(HOME_FAQS, "/");
 
   usePageMetadata({
     title: "Day of the Week Calculator - Find Any Date's Weekday Instantly",
@@ -35,7 +32,6 @@ function HomePage() {
 
   return (
     <main className="flex-1">
-      <JsonLd id="home-faq-schema" data={faqSchema} />
       <HeroSection
         badge={HOME_CONTENT.heroBadge}
         titlePrefix={HOME_CONTENT.heroTitlePrefix}
