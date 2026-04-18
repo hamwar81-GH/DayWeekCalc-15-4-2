@@ -1,6 +1,6 @@
 import FaqSection from "../components/FaqSection";
 import SearchSection from "../components/SearchSection";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { BookOpen, CalendarDays, Clock3 } from "lucide-react";
 import HeroSection from "../components/HeroSection";
 import CalculatorSuite from "../components/CalculatorSuite";
@@ -15,6 +15,7 @@ const INFO_ICONS = [Clock3, CalendarDays, BookOpen];
 
 function HomePage() {
   const calculatorRef = useRef(null);
+  const [activeTool, setActiveTool] = useState("weekday");
 
   usePageMetadata({
     title: "Day of the Week Calculator - Find Any Date's Weekday Instantly",
@@ -28,6 +29,11 @@ function HomePage() {
       behavior: "smooth",
       block: "center",
     });
+  };
+
+  const scrollToWeekdayCalculator = () => {
+    setActiveTool("weekday");
+    scrollToCalculator();
   };
 
   return (
@@ -45,7 +51,7 @@ function HomePage() {
 
       <section ref={calculatorRef} id="homepage-calculator" className="px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
-          <CalculatorSuite dayTrivia={DAY_TRIVIA} />
+          <CalculatorSuite dayTrivia={DAY_TRIVIA} activeTool={activeTool} onActiveToolChange={setActiveTool} />
         </div>
       </section>
 
@@ -86,7 +92,7 @@ function HomePage() {
         title={HOME_CONTENT.ctaTitle}
         subtitle={HOME_CONTENT.ctaSubtitle}
         buttonLabel={HOME_CONTENT.ctaButton}
-        onClick={scrollToCalculator}
+        onClick={scrollToWeekdayCalculator}
       />
     </main>
   );

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CalendarDays, CalendarRange, GitCompareArrows } from "lucide-react";
 import { TOOL_TABS } from "../lib/content";
 import DayOfWeekCalculator from "./DayOfWeekCalculator";
@@ -11,8 +10,10 @@ const TAB_ICONS = {
   offset: CalendarRange,
 };
 
-function CalculatorSuite({ dayTrivia }) {
-  const [activeTool, setActiveTool] = useState("weekday");
+function CalculatorSuite({ dayTrivia, activeTool = "weekday", onActiveToolChange }) {
+  const handleToolChange = (toolId) => {
+    onActiveToolChange?.(toolId);
+  };
 
   return (
     <div className="space-y-6">
@@ -34,7 +35,7 @@ function CalculatorSuite({ dayTrivia }) {
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => setActiveTool(tab.id)}
+                onClick={() => handleToolChange(tab.id)}
                 className={`inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400/60 focus:ring-offset-2 focus:ring-offset-dark-950 ${
                   isActive
                     ? "border-primary-500/30 bg-white/[0.08] text-white shadow-glow"
